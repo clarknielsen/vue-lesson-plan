@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js Intro</title>
+</head>
+<body>
+  <!-- the "v-if" directive will help us toggle the visibility of this div based on the value of "show" -->
+  <div id="app" v-if="show">
+    Show Me / Hide Me
+  </div>
+
+  <!-- link to the vue cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <script>
+    // create a new vue instance and attach it to the div above
+    var app = new Vue({
+      el: "#app",
+      data: {
+        show: true
+      }
+    });
+    
+    // uncomment this to see some vue magic!
+    // setInterval(function() {
+    //   app.show = !app.show;
+    // }, 1000);
+  </script>
+</body>
+</html>

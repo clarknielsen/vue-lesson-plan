@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js Methods</title>
+</head>
+<body>
+  <div id="app">
+    <button id="add">Add More Fruits!</button>
+    <ul>
+      <!-- use "v-for" directive to create an li tag for every fruit -->
+      <li v-for="fruit in fruits">
+        {{ fruit }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- link to the vue cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <script>
+    // create a new vue instance and attach it to the div above
+    var app = new Vue({
+      el: "#app",
+      data: {
+        fruits: ["banana", "apple", "orange"]
+      }
+    });
+    
+    document.getElementById("add").onclick = function() {
+      // update fruits array to include three more items
+      app.fruits = app.fruits.concat(["watermelon", "peach", "mango"]);
+    };
+  </script>
+</body>
+</html>
