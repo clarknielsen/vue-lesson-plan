@@ -1,6 +1,6 @@
 ## Javascript Frameworks
 
-With your partner, research and answer the following questions:
+* With your partner, research and answer the following questions:
 
   1. What is a Javascript framework?
 

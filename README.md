@@ -10,9 +10,7 @@ At the end of the lesson, students should be able to articulate why JS framework
 
 ### 1. Instructor Do: JS Frameworks (5 min)
 
-* Ask students to recap the purpose of jQuery.
-
-  * _It gives us an easier syntax to perform DOM manipulation._
+* Ask students to recap the purpose of jQuery. (e.g. It gives us an easier syntax to perform DOM manipulation.)
 
 * Explain that there are many tools out there that aim to serve a similar purpose: to make writing and maintaining Javascript code easier. That's when we get into what are called "Javascript frameworks."
 
@@ -30,9 +28,9 @@ At the end of the lesson, students should be able to articulate why JS framework
 
 ### 3. Instructor Do: Recap Answers (5 min)
 
-* Call on students to provide answers to the questions above. Feel free to elaborate on their feedback:
+* Call on students to provide answers to the questions above. Elaborate as needed:
 
-  1. A framework is a pre-built set of tools that dictates how to structure/organize your app and codebase. 
+  1. A framework is a pre-built set of tools that dictate how to structure/organize your app and codebase. 
 
   2. jQuery doesn't force you to use a specific structure. You can use jQuery methods in any way you see fit.
 
@@ -42,7 +40,7 @@ At the end of the lesson, students should be able to articulate why JS framework
 
 ### 4. Instructor Do: Introduce Vue (15 min)
 
-* Navigate to <https://vuejs.org/> (and Slack it out at the same time). Explain that we'll be focusing on Vue.js in this class. That doesn't mean Vue.js is necessarily _the best_ JS framework. Emphasize that the best framework is the one that makes the most sense to you and your team or best fits your project. Vue.js just happens to have a lighter learning curve, and once you master one framework, it's easier to pick up others.
+* Navigate to <https://vuejs.org/>. Explain that we'll be focusing on Vue.js in this class. That doesn't mean Vue.js is necessarily _the best_ JS framework. Emphasize that the best framework is the one that makes the most sense to you and your team or best fits your project. Vue.js just happens to have a lighter learning curve, and once you master one framework, it's easier to pick up others.
 
 * If you have any experience with React and/or Angular, you may want to briefly explain that other frameworks tend to require more setup to get started and are often paired with additional technologies you have to learn at the same time. Vue, on the other hand, is more straightforward.
 
@@ -63,7 +61,7 @@ At the end of the lesson, students should be able to articulate why JS framework
   </div>
   ```
 
-* Then show how we build Vue instances in JS and attach them to the DOM, highlighting that `Vue( )` is just a constructor that takes in an object:
+* Then show how we build Vue instances in JS and attach them to the DOM, highlighting that `new Vue( )` is just a constructor that takes in an object:
 
   ```js
   var app = new Vue({
@@ -74,7 +72,7 @@ At the end of the lesson, students should be able to articulate why JS framework
   });
   ```
 
-* When the page loads, the message "Hello World" will appear in the div with the same ID. Add 1-2 more placeholders and data properties to drive home this point. Rename the ID to also show that it doesn't have to be called "app."
+* When the page loads, the message "Hello World" will appear in the div with the same ID. Add 1-2 more `{{ placeholders }}` and data properties to drive home this point. Rename the ID to also show that it doesn't have to be called "app;" it just has to match.
 
 ### 5. Everyone Do: Pulse Check (5 min)
 
@@ -123,7 +121,7 @@ At the end of the lesson, students should be able to articulate why JS framework
 
 * We used the `v-for` directive to essentially loop over the fruits array, making an `<li>` tag for each item (which we renamed "fruit"). Optionally, as a bonus, we can write another `v-if` inside to check if the current fruit is an apple.
 
-* Ask students how they could add three more fruits in the `setTimeout`. If students suggest just writing `.push( )` three times, see if they can think of another way, such as:
+* Ask students how they could add three more fruits in the `setTimeout`. If students suggest writing `.push( )` three times, prompt them to think of any other ways. If no suggestions, show them ours:
 
   ```js
   app.fruits = app.fruits.concat(["watermelon", "peach", "mango"]);
@@ -154,7 +152,7 @@ At the end of the lesson, students should be able to articulate why JS framework
   });
   ```
 
-* We can add methods to a Vue instance by adding a `methods` object. Because the functions we write here belong to the Vue instance (i.e. parent object), we should use `this` to reference the data.
+* We can add methods to a Vue instance by adding a `methods` object. Because the functions we write here belong to the Vue instance (i.e. the parent object), we should use `this` to reference its data.
 
 * Now that we have a new "add" method, we can delete the `document.onclick` and add a directive to the button:
 
